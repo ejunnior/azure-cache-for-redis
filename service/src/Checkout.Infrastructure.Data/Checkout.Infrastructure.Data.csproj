@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="UnitOfWork\**" />
+    <EmbeddedResource Remove="UnitOfWork\**" />
+    <None Remove="UnitOfWork\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="3.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Checkout.Domain\Checkout.Domain.csproj" />
+    <ProjectReference Include="..\Checkout.Infrastructure.Data.Core\Checkout.Infrastructure.Data.Core.csproj" />
+  </ItemGroup>
+
+</Project>
